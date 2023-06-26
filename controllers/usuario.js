@@ -26,7 +26,9 @@ const postUsuario = async(req, res = response) =>{
     console.log(body)
     try {
         await usuario.save()
-        mensaje = 'Usuario registrado exitosamente'
+        Swal.fire({
+            icon: "check",
+            title: "Compra registrada exitosamente"
     } catch (error) {
         mensaje = error
     }
